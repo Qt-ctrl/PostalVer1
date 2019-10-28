@@ -5,6 +5,7 @@
 #include <QTextStream>
 #include <QDebug>
 
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -13,7 +14,7 @@ int main(int argc, char *argv[])
 
     //load xml
     QDomDocument doc;
-    QFile list("postal_codes.xml");
+    QFile list("C:/Users/airma/OneDrive/Desktop/Programming/QT/PostalVer1/postal_codes.xml");
 
     if (!list.open(QIODevice::ReadOnly | QIODevice::Text))
     {
@@ -21,12 +22,14 @@ int main(int argc, char *argv[])
         return -1;
     }else
     {
-        if(doc.setContent(&list))
+        if(!doc.setContent(&list))
         {
             qDebug() << "błąd przy ladowaniu";
             return -1;
         }
+        list.close();
     }
+
 
 
 

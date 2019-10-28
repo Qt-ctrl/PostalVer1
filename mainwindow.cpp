@@ -5,8 +5,31 @@
 #include <QMessageBox>
 #include <QtGui>
 #include <QtCore>
+#include "main.cpp"
+#include <QDebug>
 
+void searching(const QDomNode &base)
+{
+    QDomNode domData = base.firstChild();
+    while (!domData.isNull())
+    {
+        if (!domData.isElement())
+        {
+            QDomElement domRow = domData.toElement();
+            if (domRow.isNull())
+            {
+                if (domRow.tagName() == "dataset")
+                    qDebug () << "zipcode" << domRow.attribute("state", "");
+                else
+                    qDebug () << "/t" << domRow.tagName() << ": " << domRow.text();
 
+            }
+
+        }
+        searching(domData);
+        domData=domData.nextSibling();
+    }
+}
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -40,7 +63,9 @@ void MainWindow::on_lineEdit_returnPressed()
     }else
     {
 
-        QMessageBox::information(this,"Wyszukano",postalcode);
+
+        void searching();
+        //QMessageBox::information(this,"Wyszukano",postalcode);
                //critical
                //question
                //warning

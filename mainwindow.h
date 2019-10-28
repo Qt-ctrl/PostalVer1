@@ -17,7 +17,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    int postal;
+    QString postalcode = "00000";
 private slots:
     void on_lineEdit_returnPressed();
 
@@ -25,8 +26,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QString postalcode = "00000";
-    int postal;
+
 };
 
 #endif // MAINWINDOW_H
