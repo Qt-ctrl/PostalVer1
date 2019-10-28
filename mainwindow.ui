@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>702</width>
-    <height>369</height>
+    <width>709</width>
+    <height>488</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,10 +23,10 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>31</x>
       <y>50</y>
-      <width>241</width>
-      <height>61</height>
+      <width>176</width>
+      <height>26</height>
      </rect>
     </property>
     <property name="font">
@@ -45,14 +45,14 @@
      <set>Qt::AlignCenter</set>
     </property>
     <property name="placeholderText">
-     <string>Tutaj wpisz pełny kod</string>
+     <string>Pełny kod</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>559</x>
-      <y>210</y>
+      <x>60</x>
+      <y>90</y>
       <width>111</width>
       <height>21</height>
      </rect>
@@ -70,10 +70,10 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>90</x>
       <y>20</y>
-      <width>241</width>
-      <height>20</height>
+      <width>60</width>
+      <height>23</height>
      </rect>
     </property>
     <property name="font">
@@ -83,10 +83,20 @@
      </font>
     </property>
     <property name="text">
-     <string>Tutaj wpisz pełny kod</string>
+     <string>Podaj kod</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
     </property>
    </widget>
   </widget>
@@ -95,7 +105,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>702</width>
+     <width>709</width>
      <height>20</height>
     </rect>
    </property>
