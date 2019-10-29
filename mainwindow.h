@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QCoreApplication>
 #include <QString>
 #include <QLineEdit>
 #include <QMessageBox>
@@ -20,6 +21,8 @@ public:
     int postal;
     QString postalcode = "00000";
     int showresult=0;
+    QString path;
+
 
 private slots:
     void on_lineEdit_returnPressed();
@@ -30,6 +33,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
 
 };
 
