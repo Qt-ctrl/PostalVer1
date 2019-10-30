@@ -3,9 +3,15 @@
 
 #include <QMainWindow>
 #include <QCoreApplication>
+#include <QtSql>
+#include <QSqlError>
+#include <QSqlDatabase>
+#include <QTableView>
+#include <QLabel>
 #include <QString>
 #include <QLineEdit>
 #include <QMessageBox>
+#include <QDebug>
 
 namespace Ui {
 class MainWindow;
@@ -18,22 +24,19 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    int postal;
-    QString postalcode = "00000";
     int showresult=0;
-    QString path;
+    QString path="http://localhost/Postal";
 
 
 private slots:
-    void on_lineEdit_returnPressed();
-
-
 
     void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
 
+    QSqlDatabase dataset;
+    QSqlQueryModel *querymodel;
 
 };
 

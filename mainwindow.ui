@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>709</width>
-    <height>488</height>
+    <width>354</width>
+    <height>382</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,43 +17,12 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>31</x>
-      <y>50</y>
-      <width>176</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Courier</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>IBeamCursor</cursorShape>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="placeholderText">
-     <string>Pełny kod</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>90</y>
-      <width>111</width>
+      <x>120</x>
+      <y>270</y>
+      <width>103</width>
       <height>21</height>
      </rect>
     </property>
@@ -64,36 +33,27 @@
      <bool>true</bool>
     </property>
     <property name="text">
-     <string>Nowe wyszukiwanie</string>
+     <string>Połącz</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>20</y>
-      <width>60</width>
-      <height>23</height>
+      <x>150</x>
+      <y>210</y>
+      <width>47</width>
+      <height>13</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Sitka Banner</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
     <property name="text">
-     <string>Podaj kod</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser">
+   <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>140</y>
+      <x>40</x>
+      <y>10</y>
       <width>256</width>
       <height>192</height>
      </rect>
@@ -105,7 +65,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>709</width>
+     <width>354</width>
      <height>20</height>
     </rect>
    </property>
