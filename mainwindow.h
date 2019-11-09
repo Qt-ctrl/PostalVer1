@@ -2,16 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QCoreApplication>
-#include <QtSql>
-#include <QSqlError>
-#include <QSqlDatabase>
-#include <QTableView>
-#include <QLabel>
-#include <QString>
-#include <QLineEdit>
 #include <QMessageBox>
-#include <QDebug>
+#include <QSql>
+#include <QSqlDatabase>
+#include <QSqlQueryModel>
 
 namespace Ui {
 class MainWindow;
@@ -24,19 +18,54 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    int showresult=0;
-    QString path="http://localhost/Postal";
-
 
 private slots:
+    void on_searchButton_clicked();
 
-    void on_pushButton_clicked();
+    void on_userInput_returnPressed();
+
+    void on_pushBaden_clicked();
+
+    void on_pushBayern_clicked();
+
+    void on_pushBerlin_clicked();
+
+    void on_pushBrandenburg_clicked();
+
+    void on_pushBremen_clicked();
+
+    void on_pushHamburg_clicked();
+
+    void on_pushHessen_clicked();
+
+    void on_pushMecklenburg_clicked();
+
+    void on_pushNiedersachsen_clicked();
+
+    void on_pushNrw_clicked();
+
+    void on_pushRheinland_clicked();
+
+    void on_pushSaarland_clicked();
+
+    void on_pushSachsen_clicked();
+
+    void on_pushSachsenAnh_clicked();
+
+    void on_pushSchleswig_clicked();
+
+    void on_pushThuringen_clicked();
 
 private:
     Ui::MainWindow *ui;
-
-    QSqlDatabase dataset;
+    QSqlDatabase db1;
     QSqlQueryModel *querymodel;
+    int postalCode;
+    QString land;
+
+    bool validateInput();
+    QSqlQuery createQuery();
+    void setCredentials();
 
 };
 

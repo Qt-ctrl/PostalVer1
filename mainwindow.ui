@@ -6,24 +6,143 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>354</width>
-    <height>382</height>
+    <width>600</width>
+    <height>636</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Wyszukiwarka landów po kodzie</string>
+   <string>PostalEnchanced</string>
   </property>
-  <property name="autoFillBackground">
-   <bool>false</bool>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>270</y>
-      <width>103</width>
-      <height>21</height>
+      <x>10</x>
+      <y>70</y>
+      <width>580</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>521</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Wprowadź poprawny kod</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>401</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QLineEdit" name="userInput">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Wpisz pełny kod pocztowy</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="searchButton">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Wyszukaj</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushBaden">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>460</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string notr="true"/>
+    </property>
+    <property name="statusTip">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>BADEN - WÜRT</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushBayern">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>500</y>
+      <width>100</width>
+      <height>25</height>
      </rect>
     </property>
     <property name="cursor">
@@ -33,50 +152,247 @@
      <bool>true</bool>
     </property>
     <property name="text">
-     <string>Połącz</string>
+     <string>BAYERN</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QPushButton" name="pushBerlin">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>210</y>
-      <width>47</width>
-      <height>13</height>
+      <x>30</x>
+      <y>540</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>BERLIN</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushBrandenburg">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>580</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>BRANDENBURG</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushBremen">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>460</y>
+      <width>100</width>
+      <height>25</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>BREMEN</string>
     </property>
    </widget>
-   <widget class="QTableView" name="tableView">
+   <widget class="QPushButton" name="pushHamburg">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>10</y>
-      <width>256</width>
-      <height>192</height>
+      <x>170</x>
+      <y>500</y>
+      <width>100</width>
+      <height>25</height>
      </rect>
     </property>
+    <property name="text">
+     <string>HAMBURG</string>
+    </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>354</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
+   <widget class="QPushButton" name="pushHessen">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>540</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>HESSEN</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushMecklenburg">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>580</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>MECKLENBURG</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushNiedersachsen">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>460</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NIEDERSACHSEN</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushNrw">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>500</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NORDRHEIN - W</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushRheinland">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>540</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RHEINLAND - P</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushSaarland">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>580</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SAARLAND</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushSachsen">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>460</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SACHSEN</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushSachsenAnh">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>500</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SACHSEN - ANH.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushSchleswig">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>540</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SCHLESWIG - H.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushThuringen">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>580</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>THÜRINGEN</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>430</y>
+      <width>595</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Kliknij w land, żeby sprawdzić kiedy ma dni wolne</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>tableView</zorder>
+   <zorder>label</zorder>
+   <zorder>splitter</zorder>
+   <zorder>pushBaden</zorder>
+   <zorder>pushBerlin</zorder>
+   <zorder>pushBayern</zorder>
+   <zorder>pushBrandenburg</zorder>
+   <zorder>pushBremen</zorder>
+   <zorder>pushHamburg</zorder>
+   <zorder>pushHessen</zorder>
+   <zorder>pushMecklenburg</zorder>
+   <zorder>pushNiedersachsen</zorder>
+   <zorder>pushNrw</zorder>
+   <zorder>pushRheinland</zorder>
+   <zorder>pushSaarland</zorder>
+   <zorder>pushSachsen</zorder>
+   <zorder>pushSachsenAnh</zorder>
+   <zorder>pushSchleswig</zorder>
+   <zorder>pushThuringen</zorder>
+   <zorder>label_2</zorder>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
